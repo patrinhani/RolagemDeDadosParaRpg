@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(1,81,204,1) 50%, rgba(0,0,0,1) 100%);
+    background-size: 200% 200%;
+    animation: waveAnimation 6s linear infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1, h2 {
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  p, label {
+    color: white;
+  }
+  
+  button {
+    padding: 8px 16px;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  input[type="number"] {
+    width: 50px;
+    font-size: 16px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  button, input[type="number"] {
+    border: 1px solid #00ffd5;
+    border-radius: 4px;
+  }
+  
+  button:hover, button:focus, input[type="number"]:hover, input[type="number"]:focus {
+    outline: none;
+    box-shadow: 0 0 10px #006eff;
+  }
+  
+  #diceBox {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .dice {
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+    line-height: 1;
+    animation: diceRoll 1s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes diceRoll {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(720deg);
+    }
+  }
+  
+  #results, #maxResult, #sumResults {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  @keyframes waveAnimation {
+    0% {
+      background-position: 0 100%;
+    }
+    50% {
+      background-position: 100% 0%;
+    }
+   
+  }
+  

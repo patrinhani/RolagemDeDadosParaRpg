@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rolar Dado</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="rolagem.js" defer></script>
+</head>
+<body>
+  <h1>Escolha o dado que você deseja rolar</h1>
+  <p>
+    <button onclick="rollDice(4)">D4</button>
+    <button onclick="rollDice(6)">D6</button>
+    <button onclick="rollDice(8)">D8</button>
+    <button onclick="rollDice(10)">D10</button>
+    <button onclick="rollDice(20)">D20</button>
+    <button onclick="rollDice(100)">D100</button>
+  </p>
+
+  <label for="numDice">Quantos dados você quer rolar?</label>
+  <input type="number" id="numDice" min="1" max="100" value="1">
+  <label for="externalValue">Valor adicional:</label>
+  <input type="number" id="externalValue" value="0">
+ 
+
+  <h2>Resultados:</h2>
+  <div id="diceBox"></div>
+  <p id="results"></p>
+  <p>Maior resultado: <span id="maxResult"></span></p>
+  <p>Soma do maior resultado com o valor externo: <span id="sumResults"></span></p>
+</body>
+</html>
